@@ -1,0 +1,13 @@
+<h1>Liste des restau</h1>
+
+<%= link_to "Rajouter un restau", new_restaurant_path %>
+
+<% @restaurants.each do |restaurant| %>
+  <div>
+  <%= link_to restaurant_path(restaurant) do %>
+    <%= restaurant.name  %>
+  <% end %>
+    <%= restaurant.address  %>
+    <%= restaurant.category  %>
+  </div>
+<% end %>
